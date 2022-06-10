@@ -1,7 +1,7 @@
 //- Master layout
 
 doctype html
-html(lang='en')
+html(lang='ja')
   head
 
     //- Meta
@@ -51,20 +51,20 @@ html(lang='en')
       title Your project!
 
     //- Manifest browserconfig files
-    block manifestBrowserconfigFiles
-      link(rel='manifest', href='./manifest.json', crossorigin)
-      meta(name='msapplication-config' content='./browserconfig.xml')
+    //- block manifestBrowserconfigFiles
+    //-   link(rel='manifest', href='./manifest.json', crossorigin)
+    //-   meta(name='msapplication-config' content='./browserconfig.xml')
 
   body
 
     //- Menu
-    include ../components/menu.pug
+    //- include ../components/menu.pug
 
     //- block content
     block content
 
-    //- Footer
-    include ../components/footer.pug
+    //- //- Footer
+    //- include ../components/footer.pug
 
     //- block scripts
     block scripts
@@ -75,4 +75,4 @@ html(lang='en')
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-56237358-2');
+      gtag('config', 'XXXXXXX');
