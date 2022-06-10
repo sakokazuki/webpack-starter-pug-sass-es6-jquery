@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const autoprefixer = require('autoprefixer')
 
 const ASSET_PATH = process.env.ASSET_PATH || '/'
 
@@ -84,6 +85,21 @@ module.exports = (env) => {
             'postcss-loader',
             'sass-loader', // compiles Sass to CSS
           ],
+        },
+        {
+          test: /\.styl$/,
+          exclude: /node_modules/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                url: false,
+              }
+            },
+            'postcss-loader',
+            'stylus-loader',
+          ]
         },
         {
           test: /\.pug$/,

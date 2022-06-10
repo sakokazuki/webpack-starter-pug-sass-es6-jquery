@@ -1,7 +1,8 @@
 /* src/app.js */
 
 // Styles
-import 'styles/_app.scss'
+import 'styles/index.styl'
+
 
 $(function() {
   console.log('Ready!')
